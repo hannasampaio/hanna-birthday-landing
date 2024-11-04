@@ -1,0 +1,100 @@
+
+.hero {
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-image: url('../images/top-view-circular-frame-with-party-elements.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000; 
+        opacity: 0.2;
+    }
+
+    &__title {
+        font-size: 3rem; 
+        font-weight: bold;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    &__text {
+        font-size: 1.5rem; 
+        font-weight: 300;
+        margin-top: 36px;
+        text-align: center;
+    }
+
+    &__contador {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+
+        &__item {
+            background-color: #ce7ca5; 
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: pulse 1s infinite alternate;
+
+            &__label {
+                font-size: 0.8rem;
+                font-weight: normal;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__title {
+            font-size: 2.0rem; 
+        }
+        
+        &__text {
+            font-size: 1.2rem; 
+        }
+        
+        &__contador {
+            gap: 8px;
+        }
+
+        &__contador__item {
+            width: 60px;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+
+        &__contador__item__label {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
