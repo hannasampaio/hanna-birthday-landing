@@ -1,3 +1,4 @@
+@use 'variables';
 
 .hero {
     padding-top: 80px;
@@ -7,17 +8,6 @@
     background-size: cover; 
     background-position: center; 
     position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000; 
-        opacity: 0.2;
-    }
 
     &__title {
         font-size: 3rem; 
@@ -42,8 +32,8 @@
         flex-wrap: wrap;
 
         &__item {
-            background-color: #ce7ca5; 
-            color: #fff;
+            background-color: variables.$secondaryColor; 
+            color: variables.$textColor;
             padding: 20px;
             border-radius: 10px;
             width: 80px;

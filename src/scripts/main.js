@@ -1,3 +1,5 @@
+AOS.init();
+
 const dataDoEvento = new Date("jun 1, 2025 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
@@ -37,6 +39,6 @@ const contaAsHoras = setInterval(function() {
 
     if (distanciaAteOEvento < 0) {
         clearInterval(contaAsHoras);
-        document.querySelector('.hero__contador').innerHTML = 'Evento expirado';
+        document.querySelector('.hero__contador').innerHTML = 'A festa já começou! Obrigada por celebrar comigo';
     }
 }, 1000);

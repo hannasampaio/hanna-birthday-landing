@@ -1,0 +1,35 @@
+@use 'variables';
+
+.footer {
+    background-image: linear-gradient(135deg, #{variables.$pinkColor2}, #{variables.$yellowColor2});
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+.footer__social__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.footer__social__list li a {
+    color: variables.$secondaryColor;
+    font-weight: 700;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.footer__social__list li a:hover {
+    color: #ff3b89; 
+}
+
+.footer__credits {
+    font-size: 0.9rem;
+}
+
+.footer__credits p {
+    margin: 10px 0 0;
+}

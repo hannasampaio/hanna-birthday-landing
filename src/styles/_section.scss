@@ -1,0 +1,173 @@
+@use 'variables';
+
+.section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    border-radius: 15px;
+    max-width: 90%;
+    
+    &__title {
+        font-size: 2.5em;
+        color:variables.$secondaryColor;
+        padding: 36px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
+.schedule {
+    background-image: linear-gradient(135deg, #{variables.$pinkColor1}, #{variables.$yellowColor1});
+
+    &__list {
+        list-style: none;
+        padding: 36px;
+        font-size: 1.2em;
+        line-height: 1.5;
+        width: 500px;
+        margin: 0 auto;
+        
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 15px 20px;
+            background: variables.$secondaryColor;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+
+            & i {
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+
+.rsvp {
+    background-image: linear-gradient(135deg, #{variables.$pinkColor2}, #{variables.$yellowColor2});
+    padding-bottom: 36px;
+
+    &__text {
+        font-size: 1.5em;
+        margin: 20px 0;
+        text-align: center;
+        color: variables.$secondaryColor;
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+        
+        label {
+            font-size: 1.1em;
+            color: variables.$secondaryColor;
+        }
+        
+        input,
+        select,
+        button {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid variables.$thirdColor;
+            border-radius: 10px;
+            color: #000;
+        }
+        
+        button {
+            background-color: variables.$secondaryColor;
+            color: variables.$textColor;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            
+            &:hover {
+                background-color: variables.$thirdColor;
+                color: variables.$secondaryColor;
+            }
+        }
+    }
+}
+
+
+.gifts {
+    background-image: linear-gradient(135deg, #{variables.$pinkColor3}, #{variables.$yellowColor3});
+    padding-top: 36px;
+    padding-bottom: 56px;
+
+    &__text {
+        font-size: 1.5em;
+        color: variables.$secondaryColor;
+        margin: 20px 56px;
+        padding-bottom: 36px;
+        text-align: center;
+    }
+    
+    &__list {
+        list-style: none;
+        font-size: 1.2em;
+        line-height: 1.8;
+        padding: 24px;
+        
+        li {
+            width: 100‰;
+            max-width: 200px;
+            margin: 16px 33px;
+            padding: 15px 16px;
+            background: variables.$secondaryColor;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.142);
+            display: inline;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .gifts__list {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px; 
+    }
+
+    .gifts__list li {
+        max-width: 100%; 
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .schedule__list__item {
+        padding: 10px 15px; 
+        font-size: 16px;
+    }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .gifts__list {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px; 
+        }
+    
+    .gifts__list li {
+        max-width: 45%; 
+        padding: 10px 15px;
+        font-size: 1em; 
+        }
+    }
+}

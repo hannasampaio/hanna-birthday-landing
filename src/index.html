@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/bolo.ico">
     <title>Hanna's Birthday</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header class="hero">
@@ -16,6 +18,67 @@
             <p class="hero__text">The celebration of the year is happening in <span class="hero__contador"></span></p>
         </div>
     </header>
+    <section class="schedule">
+        <div class="container">
+            <h2 class="section__title">Event Schedule</h2>
+            <ul class="schedule__list" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                <li class="schedule__list__item">
+                    <i class="fa-regular fa-calendar-check"></i><b>Arrival:</b> 7:00 PM</li>
+                <li class="schedule__list__item">
+                    <i class="fa-solid fa-icons"></i><b>Activities:</b></i> Fun games at 7:30 PM</li>
+                <li class="schedule__list__item">
+                    <i class="fa-solid fa-music"></i><b>Live Music:</b> Starts at 8:30 PM</li>
+                <li class="schedule__list__item">
+                    <i class="fa-solid fa-cake-candles"></i><b>Cake Cutting:</b> 9:30 PM</li>
+            </ul>
+        </div>
+    </section>
+    <section class="rsvp">
+        <div class="container">
+            <h2 class="section__title">RSVP</h2>
+            <p class="rsvp__text">Please confirm your attendance below:</p>
+            <form class="rsvp__form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="attendance">Will you attend?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section class="gifts">
+        <div class="container">
+            <h2 class="section__title">Gift List</h2>
+            <p class="gifts__text">If you'd like to bring a gift, here are some suggestions:</p>
+            <ul class="gifts__list" data-aos="zoom-in">
+                <li><i class="fa-regular fa-credit-card"></i></i>Gift Card</li>
+                <li><i class="fa-solid fa-house-chimney-window"></i>Home Decor</li>
+                <li><i class="fa-solid fa-book"></i>Books</li>
+                <li><i class="fa-solid fa-gift"></i></i>Surprise me!</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social">
+                <ul class="footer__social__list">
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer__credits">
+                <p>&copy; 2024 Hanna's Birthday | Desenvolvido por Hanna Sampaio</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5f07c65afa.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
